@@ -43,6 +43,12 @@ public class MemServiceImpl implements MemService {
 	public void login(Scanner sc) {
 		// TODO Auto-generated method stub
 		System.out.println("====로그인====");
+		if (loginCheck()) {
+			System.out.println("로그인 중");
+			return;
+		}
+		
+		
 		System.out.print("id:");
 		String id = sc.next();
 		System.out.print("pwd:");
